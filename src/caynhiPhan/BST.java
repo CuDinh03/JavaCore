@@ -64,11 +64,11 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
         if (root == null) {
             return;
         }
-        inorder((TreeNode<E>) root.left);
+        inorder( root.left);
 
         System.out.println(root.element + " ");
 
-        inorder((TreeNode<E>) root.right);
+        inorder( root.right);
     }
 
 }
