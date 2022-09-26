@@ -5,10 +5,10 @@ public class Main {
 
         BST<String> tree = new BST<>();
         tree.insert("Cu");
-        tree.insert("Viet");
+        tree.insert("Dung");
         tree.insert("Tu");
         tree.insert("Son");
-        tree.insert("Loc");
+        tree.insert("Yen");
         tree.insert("Toan");
         tree.insert("An");
 
