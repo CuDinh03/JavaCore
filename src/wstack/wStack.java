@@ -20,6 +20,7 @@ public class wStack {
         }
 
         arr = array;
+        System.out.println("Mang truoc khi sap xep: ");
         System.out.println(Arrays.toString(arr));
 
     }
@@ -36,12 +37,12 @@ public class wStack {
             if (stack.size()==0){
                 break;
             }else {
-                array[i] = stack.peek();
-                stack.pop();
+                array[i] = stack.pop();
                 i++;
             }
         }
         arr =array;
+        System.out.println("Mang sau khi dao chieu: ");
         System.out.println(Arrays.toString(arr));
 
     }
