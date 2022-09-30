@@ -96,16 +96,13 @@ public class QuanLy {
         }
     }
     void sapXep() {
-        Comparator<PhuongTien> com1 = new Comparator<PhuongTien>() {
-            @Override
-            public int compare(PhuongTien o1, PhuongTien o2) {
-                if (o1.getId()< o2.getId()){
-                    return -1;
-                } else if (o1.getId() == o2.getId()) {
-                    return 0;
-                }else {
-                    return 1;
-                }
+        Comparator<PhuongTien> com1 = (o1, o2) -> {
+            if (o1.getId()< o2.getId()){
+                return -1;
+            } else if (o1.getId() == o2.getId()) {
+                return 0;
+            }else {
+                return 1;
             }
         };
         Collections.sort(ListPhuongTien,com1);

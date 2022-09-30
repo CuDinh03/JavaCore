@@ -74,7 +74,6 @@ abstract class PhuongTien implements PhuongThuc{
         this.MauXe = scanner.nextLine();
     }
 
-
     @Override
     public void xuat() {
         System.out.println( "PhuongTien{" +
