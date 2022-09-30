@@ -6,11 +6,11 @@ import java.util.ArrayList;
 public class IOClassCG_nhiPhan {
     static File file = new File("ClassCG.txt");
 
-    public static void write(ArrayList<Students> students){
+    public static void write(ArrayList<ClassCG> classCGS){
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(students);
+            objectOutputStream.writeObject(classCGS);
         }catch (Exception e){
             e.printStackTrace();
         }
