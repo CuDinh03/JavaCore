@@ -7,13 +7,14 @@ import java.util.Scanner;
 public class Controllermenu {
 
     Scanner scanner = new Scanner(System.in);
-    File file = new File("data/students.txt");
+    File file = new File("datastudents.txt");
 
     IOReadAndWrite ioReadAndWrite = new IOReadAndWrite();
     ArrayList<Students> list = ioReadAndWrite.read(file);
     Controller controller = new Controller();
     public Controllermenu(){
         list.add(new Students(4,"cu","nam","hn",6.5));
+        ioReadAndWrite.write(file,list);
     }
 
     void menuMain() {
