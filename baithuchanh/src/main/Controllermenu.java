@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Controllermenu {
 
     Scanner scanner = new Scanner(System.in);
-    File file = new File("datastudents.txt");
+    File file = new File("datastudents.csv");
 
     IOReadAndWrite ioReadAndWrite = new IOReadAndWrite();
     ArrayList<Students> list = ioReadAndWrite.read(file);

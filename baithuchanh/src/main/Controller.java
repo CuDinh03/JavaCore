@@ -141,7 +141,7 @@ public class Controller {
     }
 
     void readFile(ArrayList<Students> list, File file){
-        file = new File("datastudents.txt");
+        file = new File("datastudents.csv");
         IOReadAndWrite ioReadAndWrite = new IOReadAndWrite();
 
         ArrayList<Students> list1 = ioReadAndWrite.read(file);
@@ -151,7 +151,7 @@ public class Controller {
         System.out.println(list1.toString());
     }
     void writeFile(ArrayList<Students> list, File file){
-        file = new File("datastudents.txt");
+        file = new File("datastudents.csv");
         IOReadAndWrite ioReadAndWrite = new IOReadAndWrite();
         Students students = new Students(0,"cu","nam","py",4.5);
         list.add(students);
