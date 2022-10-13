@@ -12,10 +12,6 @@ public class Controllermenu {
     IOReadAndWrite ioReadAndWrite = new IOReadAndWrite();
     ArrayList<Students> list = ioReadAndWrite.read(file);
     Controller controller = new Controller();
-    public Controllermenu(){
-        list.add(new Students(4,"cu","nam","hn",6.5));
-        ioReadAndWrite.write(file,list);
-    }
 
     void menuMain() {
         int choice = 0;

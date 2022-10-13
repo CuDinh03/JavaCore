@@ -146,7 +146,7 @@ public class Controller {
 
         ArrayList<Students> list1 = ioReadAndWrite.read(file);
 
-        System.out.println("Ghi thành công");
+        System.out.println("Đọc thành công");
 
         System.out.println(list1.toString());
     }
@@ -156,6 +156,7 @@ public class Controller {
         Students students = new Students(0,"cu","nam","py",4.5);
         list.add(students);
         ioReadAndWrite.write(file,list);
+        System.out.println("Ghi thành công ");
 
     }
 }
