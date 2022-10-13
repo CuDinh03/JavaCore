@@ -12,9 +12,6 @@ public class Manager {
 
     Scanner scanner = new Scanner(System.in);
     public Manager(){
-        classCGS.add(new ClassCG(1,"C0722G1"));
-        classCGS.add(new ClassCG(2,"C0822G1"));
-        classCGS.add(new ClassCG(3,"C0922G1"));
     }
 
     public void inPut(){
