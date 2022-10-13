@@ -121,6 +121,7 @@ public class Controller {
     }
 
     void sortMintoMax(){
+
         Comparator<Students> com1 = (o1, o2) -> {
             if (o1.getAvg() < o2.getAvg()) {
                 return -1;
@@ -135,13 +136,23 @@ public class Controller {
     }
 
     void sortMaxtoMin(){
-        sortMaxtoMin();
+        Comparator<Students> com1 = (o1, o2) -> {
+            if (o1.getAvg() < o2.getAvg()) {
+                return -1;
+            }else if (o1.getAvg() == o2.getAvg()){
+                return 0;
+            }else {
+                return 1;
+            }
+
+        };
+        Collections.sort(list,com1);
         Collections.reverse(list);
         showData();
     }
 
-    void readFile(ArrayList<Students> list, File file){
-        file = new File("datastudents.csv");
+    void readFile(){
+        File file = new File("datastudents.csv");
         IOReadAndWrite ioReadAndWrite = new IOReadAndWrite();
 
         ArrayList<Students> list1 = ioReadAndWrite.read(file);
@@ -150,12 +161,13 @@ public class Controller {
 
         System.out.println(list1.toString());
     }
-    void writeFile(ArrayList<Students> list, File file){
-        file = new File("datastudents.csv");
+    void writeFile(){
+        File file = new File("datastudents.csv");
         IOReadAndWrite ioReadAndWrite = new IOReadAndWrite();
+        ArrayList<Students> list1 = ioReadAndWrite.read(file);
         Students students = new Students(0,"cu","nam","py",4.5);
-        list.add(students);
-        ioReadAndWrite.write(file,list);
+        list1.add(students);
+        ioReadAndWrite.write(file,list1);
         System.out.println("Ghi thành công ");
 
     }

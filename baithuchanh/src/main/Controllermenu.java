@@ -7,10 +7,6 @@ import java.util.Scanner;
 public class Controllermenu {
 
     Scanner scanner = new Scanner(System.in);
-    File file = new File("datastudents.csv");
-
-    IOReadAndWrite ioReadAndWrite = new IOReadAndWrite();
-    ArrayList<Students> list = ioReadAndWrite.read(file);
     Controller controller = new Controller();
 
     void menuMain() {
@@ -28,7 +24,7 @@ public class Controllermenu {
             System.out.println("8. Thoát");
             System.out.println("Chọn chức năng:");
 
-            while (choice !=0 || true) {
+            while (true) {
                 System.out.println("lựa chọn của bạn: ");
                 try {
                     choice = Integer.parseInt(scanner.nextLine());
@@ -56,10 +52,10 @@ public class Controllermenu {
                     sortStudents();
                     break;
                 case 6:
-                    controller.readFile(list,file);
+                    controller.readFile();
                     break;
                 case 7:
-                    controller.writeFile(list,file);
+                    controller.writeFile();
                     break;
                 case 8:
                     System.exit(0);
